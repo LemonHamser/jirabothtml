@@ -1,7 +1,9 @@
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <!DOCTYPE html>
-<meta charset="UTF-8" />
-<html>
+<html lang="en">
+  <head>
+    <title>JiraHook</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
   <body>
     <form>
       <div class="merchantChose">
@@ -13,59 +15,49 @@
           <option value="MST">Mostbet</option>
           <option value="BNZ">Banzai</option>
         </select>
-
         <br />
-        <br />
-
-        <h3><label for="currency">Укажите валюту</label><br /></h3>
-        <input type="text" id="currency" name="currency" /><br /><br />
+        <h3>Укажите валюту</h3>
+        <input type="text" id="currency" name="currency" /><br />
       </div>
 
-      <h3>Укажите вид трафика</h3>
-      <select id="mySelectTraff name="mySelectTraff">
-        <option value="First">Первичка</option>
-        <option value="Second">Вторичка</option>
-        <option value="Shared">Общий</option>
-      </select>
+      <div id="tellYourTraffic">
+        <h3>Укажите вид трафика</h3>
+        <select id="mySelectTraff" name="mySelectTraff">
+          <option value="First">Первичка</option>
+          <option value="Second">Вторичка</option>
+          <option value="Shared">Общий</option>
+        </select>
+      </div>
 
-      <br /><br />
+      <div id="tellYourCode">
+        <h3>Введите код метода(согласно коду из админки)</h3>
+        <input type="text" id="mcode" name="mcode" />
+      </div>
+      <div>
+        <h3>Введите название провайдера</h3>
+        <input type="text" id="pname" name="pname" /><br />
+      </div>
 
-      <h3>Введите код метода(согласно коду из админки)</h3><br />
-      <input type="text" id="mcode" name="mcode" /><br /><br />
-
-      <h3>Введите название провайдера</h3><br />
-      <input type="text" id="pname" name="pname" /><br /><br />
-
-      <h3><p>Укажите причину инцидента</p></h3>
+      <h3>Укажите причину инцидента</h3>
       <select id="mySelectCause" name="mySelectCause">
         <option value="sp">Снижение проходимости</option>
         <option value="tr">Технические работы</option>
         <option value="ts">Технический сбой</option>
         <option value="mcode">Свой вариант</option>
-      </select><br /><br />
+      </select>
       <input type="text" id="svar" name="svar" /><br />
-      
 
       <div class="changeInc">
         <h3>Укажите изменение</h3>
         <select id="mySelectChange" name="mySelectChange">
-            <option value="otme">Отключение метода</option>
-            <option value="izka">Изменение каскада</option>
-            <option value="am">Альтернативный вариант</option>
-          </select><br /><br />
-
-          <input
-          type="text"
-          id="am_text"
-          name="custom"
-          id="custom" />
-
+          <option value="otme">Отключение метода</option>
+          <option value="izka">Изменение каскада</option>
+          <option value="am">Альтернативный вариант</option>
+        </select>
+        <input type="text" id="am_text" name="custom" />
       </div>
     </form>
 
     <script src="script.js"></script>
-
-    </script>
-
   </body>
 </html>

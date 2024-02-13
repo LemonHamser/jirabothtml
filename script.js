@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleSelectChange(selectElement, targetElement, targetValue) {
       selectElement.addEventListener('change', function() {
         if (selectElement.value === targetValue) {
-          targetElement.style.display = 'block';
+          targetElement.style.display = 'inline-block';
         } else {
           targetElement.style.display = 'none';
         }
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
       // Проверка при загрузке страницы
       if (selectElement.value === targetValue) {
-        targetElement.style.display = 'block';
+        targetElement.style.display = 'inline-block';
       } else {
         targetElement.style.display = 'none';
       }
