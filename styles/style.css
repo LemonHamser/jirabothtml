@@ -1,0 +1,11 @@
+.custom-container {
+  border: 1px solid #f7f7f7; /* Цвет рамки */
+  border-radius: 10px; /* Радиус закругления углов */
+  background-color: #ffffff; /* Цвет фона */
+  padding: 20px; /* Отступы внутри контейнера */
+  margin-top: 20px; /* Отступ сверху */
+}
+
+body {
+  background-color: #010639; /* Цвет фона за рамкой */
+}

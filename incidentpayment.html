@@ -3,61 +3,71 @@
   <head>
     <title>JiraHook</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
   <body>
-    <form>
-      <div class="merchantChose">
-        <h3>Выберите мерчанта</h3>
-
-        <select id="mySelectMerch" name="mySelectMerch">
-          <option value="BA">BA</option>
-          <option value="VIVI">ViVi</option>
-          <option value="MST">Mostbet</option>
-          <option value="BNZ">Banzai</option>
+    <div class="container custom-container">
+      <form>
+        <div class="merchantChose">
+          <h5>Выберите мерчанта</h5>
+          <select id="mySelectMerch" name="mySelectMerch">
+            <option value="BA">BA</option>
+            <option value="VIVI">ViVi</option>
+            <option value="MST">Mostbet</option>
+            <option value="BNZ">Banzai</option>
+          </select>
+          <hr />
+          <h5>Укажите валюту</h5>
+          <input type="text" id="currency" name="currency" /><br />
+        </div>
+        <hr />
+        <div id="tellYourTraffic">
+          <h5>Укажите вид трафика</h5>
+          <select id="mySelectTraff" name="mySelectTraff">
+            <option value="First">Первичка</option>
+            <option value="Second">Вторичка</option>
+            <option value="Shared">Общий</option>
+          </select>
+        </div>
+        <hr />
+        <div id="tellYourCode">
+          <h5>Введите код метода(согласно коду из админки)</h5>
+          <input type="text" id="mcode" name="mcode" />
+        </div>
+        <hr />
+        <div>
+          <h5>Введите название провайдера</h5>
+          <input type="text" id="pname" name="pname" /><br />
+        </div>
+        <hr />
+        <h5>Укажите причину инцидента</h5>
+        <select id="mySelectCause" name="mySelectCause">
+          <option value="sp">Снижение проходимости</option>
+          <option value="tr">Технические работы</option>
+          <option value="ts">Технический сбой</option>
+          <option value="mcode">Свой вариант</option>
         </select>
-        <br />
-        <h3>Укажите валюту</h3>
-        <input type="text" id="currency" name="currency" /><br />
-      </div>
+        <input type="text" id="svar" name="svar" /><br />
+        <hr />
+        <div class="changeInc">
+          <h5>Укажите изменение</h5>
+          <select id="mySelectChange" name="mySelectChange">
+            <option value="otme">Отключение метода</option>
+            <option value="izka">Изменение каскада</option>
+            <option value="am">Альтернативный вариант</option>
+          </select>
+          <input type="text" id="am_text" name="custom" />
+        </div>
+        <hr />
+      </form>
+    </div>
 
-      <div id="tellYourTraffic">
-        <h3>Укажите вид трафика</h3>
-        <select id="mySelectTraff" name="mySelectTraff">
-          <option value="First">Первичка</option>
-          <option value="Second">Вторичка</option>
-          <option value="Shared">Общий</option>
-        </select>
-      </div>
-
-      <div id="tellYourCode">
-        <h3>Введите код метода(согласно коду из админки)</h3>
-        <input type="text" id="mcode" name="mcode" />
-      </div>
-      <div>
-        <h3>Введите название провайдера</h3>
-        <input type="text" id="pname" name="pname" /><br />
-      </div>
-
-      <h3>Укажите причину инцидента</h3>
-      <select id="mySelectCause" name="mySelectCause">
-        <option value="sp">Снижение проходимости</option>
-        <option value="tr">Технические работы</option>
-        <option value="ts">Технический сбой</option>
-        <option value="mcode">Свой вариант</option>
-      </select>
-      <input type="text" id="svar" name="svar" /><br />
-
-      <div class="changeInc">
-        <h3>Укажите изменение</h3>
-        <select id="mySelectChange" name="mySelectChange">
-          <option value="otme">Отключение метода</option>
-          <option value="izka">Изменение каскада</option>
-          <option value="am">Альтернативный вариант</option>
-        </select>
-        <input type="text" id="am_text" name="custom" />
-      </div>
-    </form>
-
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
