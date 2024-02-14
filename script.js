@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var amText = document.getElementById('am_text');
   var incProviders = document.getElementById('incProviders');
   var changeIncProviders = document.getElementById('changeIncProviders');
+  var cascadeChange = document.getElementById('cascadeChange')
 
   function handleSelectChange(selectElement, targetElement, targetValue) {
     selectElement.addEventListener('change', function() {
@@ -49,5 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
   handleSelectChange(mySelectCause, incProviders, ['sp', 'tr', 'ts']);
 
   // Обработка для mySelectChange и changeIncProviders
-  handleSelectChange(mySelectChange, changeIncProviders, ['otme', 'izka']);
+  handleSelectChange(mySelectChange, changeIncProviders, ['otme']);
+  handleSelectChange(mySelectChange, cascadeChange, ['izka']);
 });

@@ -18,3 +18,7 @@ body {
 .texts {
   width: 27%; /* Ширина списка */
 }
+
+#cascadeChangetext {
+  width: 200%;
+}
