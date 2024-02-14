@@ -9,3 +9,12 @@
 body {
   background-color: #010639; /* Цвет фона за рамкой */
 }
+
+.form-group {
+  display: block;
+}
+
+.custom-select-width,
+.texts {
+  width: 27%; /* Ширина списка */
+}

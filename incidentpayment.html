@@ -14,20 +14,33 @@
       <form>
         <div class="merchantChose">
           <h5>Выберите мерчанта</h5>
-          <select id="mySelectMerch" name="mySelectMerch">
+          <select
+            id="mySelectMerch"
+            name="mySelectMerch"
+            class="form-control custom-select-width"
+          >
             <option value="BA">BA</option>
             <option value="VIVI">ViVi</option>
             <option value="MST">Mostbet</option>
             <option value="BNZ">Banzai</option>
           </select>
-          <hr />
+          <hr class="hr-danger" />
           <h5>Укажите валюту</h5>
-          <input type="text" id="currency" name="currency" /><br />
+          <input
+            type="text"
+            id="currency"
+            name="currency"
+            class="form-control texts"
+          /><br />
         </div>
         <hr />
         <div id="tellYourTraffic">
           <h5>Укажите вид трафика</h5>
-          <select id="mySelectTraff" name="mySelectTraff">
+          <select
+            id="mySelectTraff"
+            name="mySelectTraff"
+            class="form-control custom-select-width"
+          >
             <option value="First">Первичка</option>
             <option value="Second">Вторичка</option>
             <option value="Shared">Общий</option>
@@ -36,36 +49,96 @@
         <hr />
         <div id="tellYourCode">
           <h5>Введите код метода(согласно коду из админки)</h5>
-          <input type="text" id="mcode" name="mcode" />
+          <input
+            type="text"
+            id="mcode"
+            name="mcode"
+            class="form-control texts"
+            p
+          />
         </div>
         <hr />
         <div>
           <h5>Введите название провайдера</h5>
-          <input type="text" id="pname" name="pname" /><br />
+          <input
+            type="text"
+            id="pname"
+            name="pname"
+            class="form-control texts"
+          /><br />
+        </div>
+        <hr class="hr-dark" />
+
+        <h5>Укажите причину инцидента</h5>
+        <div class="form-inline">
+          <select
+            id="mySelectCause"
+            name="mySelectCause"
+            class="form-control custom-select-width mr-1"
+          >
+            <option value="sp">Снижение проходимости</option>
+            <option value="tr">Технические работы</option>
+            <option value="ts">Технический сбой</option>
+            <option value="mcode">Свой вариант</option>
+          </select>
+          <input
+            type="text"
+            id="svar"
+            name="svar"
+            class="form-control texts mr-1"
+          />
+          <div id="incProviders" class="form-group">
+            <select
+              id="incProvidersSelect"
+              class="form-control custom-select-width mr-1"
+            >
+              <option value="PDG">PDG</option>
+              <option value="BA">BA</option>
+              <option value="MST">Mostbet</option>
+              <option value="COR">Corefy</option>
+              <option value="BIR">Birpay</option>
+              <option value="GRNB">Greenback</option>
+            </select>
+          </div>
         </div>
         <hr />
-        <h5>Укажите причину инцидента</h5>
-        <select id="mySelectCause" name="mySelectCause">
-          <option value="sp">Снижение проходимости</option>
-          <option value="tr">Технические работы</option>
-          <option value="ts">Технический сбой</option>
-          <option value="mcode">Свой вариант</option>
-        </select>
-        <input type="text" id="svar" name="svar" /><br />
-        <hr />
-        <div class="changeInc">
-          <h5>Укажите изменение</h5>
-          <select id="mySelectChange" name="mySelectChange">
+
+        <h5>Укажите изменение</h5>
+        <div class="changeInc form-inline">
+          <select
+            id="mySelectChange"
+            name="mySelectChange"
+            class="form-control custom-select-width mr-1"
+          >
             <option value="otme">Отключение метода</option>
             <option value="izka">Изменение каскада</option>
             <option value="am">Альтернативный вариант</option>
           </select>
-          <input type="text" id="am_text" name="custom" />
+          <input
+            type="text"
+            id="am_text"
+            name="custom"
+            class="form-control texts mr-1"
+          />
+          <div id="changeIncProviders" class="form-group">
+            <select
+              id="changeIncProvidersSelect"
+              class="form-control custom-select-width mr-1"
+            >
+              <option value="PDG">PDG</option>
+              <option value="BA">BA</option>
+              <option value="MST">Mostbet</option>
+              <option value="COR">Corefy</option>
+              <option value="BIR">Birpay</option>
+              <option value="GRNB">Greenback</option>
+            </select>
+          </div>
         </div>
         <hr />
       </form>
     </div>
 
+    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
