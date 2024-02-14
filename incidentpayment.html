@@ -137,7 +137,6 @@
           <br />
           <h5>Укажите как изменился каскад</h5>
           <textarea
-            type="text"
             id="cascadeChangetext"
             name="cascadeChangetext"
             class="form-control"
@@ -151,6 +150,40 @@
           </select>
         </div>
         <hr />
+        <input type="checkbox" name="partnInform" id="partnInform" />
+        <label for="partnInform">
+          <h5>Оповещение партнерки</h5>
+        </label>
+        <div id="partnInformDiv">
+          <h5>Укажите причину инцидента</h5>
+          <textarea
+            id="partnInformInc"
+            name="partnInformInc"
+            class="form-control"
+            rows="2"
+          >
+          </textarea>
+          <h5>Укажите срок восстановления инцидента</h5>
+          <input
+            type="text"
+            id="partnInformEndInc"
+            name="partnInformEndInc"
+            class="form-control col-md-2"
+          />
+        </div>
+        <br />
+        <input type="checkbox" name="csInform" id="csInform" />
+        <label for="csInform"><h5>Оповещение Customer Support</h5></label>
+        <div id="partnInformCS">
+          <h5>Укажите название метода на сайте</h5>
+          <textarea
+            id="partnInformCS"
+            name="partnInformCS"
+            class="form-control"
+            rows="2"
+          >
+          </textarea>
+        </div>
       </form>
     </div>
 

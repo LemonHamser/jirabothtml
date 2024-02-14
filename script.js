@@ -5,7 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
   var amText = document.getElementById('am_text');
   var incProviders = document.getElementById('incProviders');
   var changeIncProviders = document.getElementById('changeIncProviders');
-  var cascadeChange = document.getElementById('cascadeChange')
+  var cascadeChange = document.getElementById('cascadeChange');
+  var partnInformCheckbox = document.getElementById('partnInform');
+  var partnInformDiv = document.getElementById('partnInformDiv');
+  var partnInformCS = document.getElementById('partnInformCS');
+  var csInformCheckbox = document.getElementById('csInform');
 
   function handleSelectChange(selectElement, targetElement, targetValue) {
     selectElement.addEventListener('change', function() {
@@ -50,6 +54,35 @@ document.addEventListener("DOMContentLoaded", function() {
   handleSelectChange(mySelectCause, incProviders, ['sp', 'tr', 'ts']);
 
   // Обработка для mySelectChange и changeIncProviders
-  handleSelectChange(mySelectChange, changeIncProviders, ['otme']);
+  handleSelectChange(mySelectChange, changeIncProviders, ['otme','izka']);
   handleSelectChange(mySelectChange, cascadeChange, ['izka']);
+
+  partnInformCheckbox.addEventListener('change', function() {
+    if (partnInformCheckbox.checked) {
+      partnInformDiv.style.display = 'block';
+    } else {
+      partnInformDiv.style.display = 'none';
+    }
+  });
+
+  csInformCheckbox.addEventListener('change', function() {
+    if (csInformCheckbox.checked) {
+      partnInformCS.style.display = 'block';
+    } else {
+      partnInformCS.style.display = 'none';
+    }
+  });
+
+  // Проверка при загрузке страницы
+  if (partnInformCheckbox.checked) {
+    partnInformDiv.style.display = 'block';
+  } else {
+    partnInformDiv.style.display = 'none';
+  }
+
+  if (csInformCheckbox.checked) {
+    partnInformCS.style.display = 'block';
+  } else {
+    partnInformCS.style.display = 'none';
+  }
 });
