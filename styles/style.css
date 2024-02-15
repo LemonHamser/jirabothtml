@@ -22,3 +22,9 @@ body {
 #cascadeChangetext {
   width: 100%;
 }
+
+#changeIncProviders,
+#cascadeChange,
+#am_text {
+  display: none;
+}

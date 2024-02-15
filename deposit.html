@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JiraHook Deposit</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container custom-container">
+      <form>
+          <div id="someclass">
+            <h5>Введите код метода(согласно админке MST/BA)</h5>
+            <input class="form-control custom-select-width" type="text" name="" id="">
+          </div>
+          <hr>
+          <div id="someclass">
+            <h5>Введите название провайдера</h5>
+            <input type="text " class="form-control custom-select-width">
+          </div>
+          <hr>
+          <div id="someclass">
+            <h5>Укажите причину инцидента</h5>
+            <div class="form-inline">
+              <select
+                id="mySelectCause"
+                name="mySelectCause"
+                class="form-control custom-select-width mr-1"
+              >
+                <option value="zvp">Закончился выплатной баланс</option>
+                <option value="tr">Технические работы</option>
+                <option value="ts">Просьба коллег</option>
+                <option value="mcode">Свой вариант</option>
+              </select>
+              <input
+                type="text"
+                id="svar"
+                name="svar"
+                class="form-control texts mr-1"
+              />
+
+            </div>
+            <hr />
+    
+            <h5>Укажите изменение</h5>
+            <div class="changeInc form-inline">
+              <select
+                id="mySelectChange"
+                name="mySelectChange"
+                class="form-control custom-select-width mr-1"
+              >
+                <option value="otme">Отключение метода</option>
+                <option value="otap">Отключение автоаппрува</option>
+                <option value="izka">Изменение каскада</option>
+                <option value="am">Альтернативный вариант</option>
+              </select>
+              <input
+                type="text"
+                id="am_text"
+                name="custom"
+                class="form-control texts mr-1"
+              />
+              <div id="changeIncProviders" class="form-group">
+                <select
+                  id="changeIncProvidersSelect"
+                  class="form-control custom-select-width mr-1"
+                >
+                <option value="BIR">Birpay</option>
+                  <option value="BA">BA</option>
+                  <option value="GRNB">Greenback</option>
+                  <option value="MST">Mostbet</option>
+                  <option value="8BIL">8billing</option>
+                </select>
+              </div>
+            </div>
+            <div id="cascadeChange" class="col-md-6">
+              <br />
+              <h5>Укажите как изменился каскад</h5>
+              <textarea
+                id="cascadeChangetext"
+                name="cascadeChangetext"
+                class="form-control"
+                rows="2"
+              ></textarea>
+              <br />
+              <hr>
+          </div>
+          <hr>
+          <input type="checkbox" name="csInform" id="csInform" />
+          <label for="csInform"><h5>Оповещение Customer Support</h5></label>
+          <div id="partnInformCS">
+            <h5>Укажите название метода на сайте</h5>
+            <textarea
+              id="partnInformCS"
+              name="partnInformCS"
+              class="form-control"
+              rows="2"
+            >
+            </textarea>
+          </div>
+
+
+
+
+      </form>
+    </div>
+
+    <script src="script2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
