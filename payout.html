@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>JiraHook Deposit</title>
+    <title>JiraHook Payout</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link
       rel="stylesheet"
@@ -12,6 +12,27 @@
   <body>
     <div class="container custom-container">
       <form>
+        <div class="merchantChose">
+          <h5>Выберите мерчанта</h5>
+          <select
+            id="mySelectMerch"
+            name="mySelectMerch"
+            class="form-control custom-select-width"
+          >
+            <option value="BA">BA</option>
+            <option value="VIVI">ViVi</option>
+            <option value="MST">Mostbet</option>
+            <option value="BNZ">Banzai</option>
+          </select>
+          <hr class="hr-danger" />
+          <h5>Укажите валюту</h5>
+          <input
+            type="text"
+            id="currency"
+            name="currency"
+            class="form-control texts"
+          />
+        </div>
           <div id="someclass">
             <h5>Введите код метода(согласно админке MST/BA)</h5>
             <input class="form-control custom-select-width" type="text" name="" id="">
