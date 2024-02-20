@@ -85,4 +85,35 @@ document.addEventListener("DOMContentLoaded", function() {
   } else {
     partnInformCS.style.display = 'none';
   }
+
+  
+});
+
+$(document).ready(function(){
+  $('#sendFormBtn').click(function(){
+      var formData = {
+          merchant: $('#mySelectMerch').val(),
+          currency: $('#currency').val(),
+          traffic: $('#mySelectTraff').val(),
+          method_code: $('#mcode').val(),
+          provider_name: $('#pname').val(),
+          incident_reason: $('#mySelectCause').val(),
+          custom_reason: $('#svar').val(),
+          incident_provider: $('#incProvidersSelect').val(),
+          incident_change: $('#mySelectChange').val(),
+          custom_change: $('#am_text').val(),
+          change_provider: $('#changeIncProvidersSelect').val(),
+          cascade_change: $('#cascadeChangetext').val(),
+          throughput_changed: $('#yesNo').val(),
+          partner_notification: $('#partnInform').prop('checked'),
+          partner_incident_reason: $('#partnInformInc').val(),
+          partner_incident_recovery_time: $('#partnInformEndInc').val(),
+          cs_notification: $('#csInform').prop('checked'),
+          cs_method_name: $('#partnInformCS').val()
+      };
+
+      var jsonData = JSON.stringify(formData);
+      console.log(jsonData);
+      // Здесь вы можете отправить jsonData на сервер или сделать что-то еще с ним
+  });
 });
