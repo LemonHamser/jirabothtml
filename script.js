@@ -45,17 +45,17 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Обработка для mySelectCause и svarInput
-  handleSelectChange(mySelectCause, svarInput, 'mcode');
+  handleSelectChange(mySelectCause, svarInput, 'Свой вариант');
 
   // Обработка для mySelectChange и amText
-  handleSelectChange(mySelectChange, amText, 'am');
+  handleSelectChange(mySelectChange, amText, 'Альтернативный вариант');
 
   // Обработка для mySelectCause и incProviders
-  handleSelectChange(mySelectCause, incProviders, ['sp', 'tr', 'ts']);
+  handleSelectChange(mySelectCause, incProviders, ['Снижение проходимости', 'Технические работы', 'Технический сбой']);
 
   // Обработка для mySelectChange и changeIncProviders
-  handleSelectChange(mySelectChange, changeIncProviders, ['otme','izka']);
-  handleSelectChange(mySelectChange, cascadeChange, ['izka']);
+  handleSelectChange(mySelectChange, changeIncProviders, ['Отключение метода','Изменение каскада']);
+  handleSelectChange(mySelectChange, cascadeChange, ['Изменение каскада']);
 
   partnInformCheckbox.addEventListener('change', function() {
     if (partnInformCheckbox.checked) {

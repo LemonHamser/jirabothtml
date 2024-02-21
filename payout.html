@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>JiraHook Payout</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link rel="stylesheet" href="/styles/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
   <body>
-    <div class="container custom-container">
-      <form action="random.php" method="post">
+    <div class="custom-container">
+      <form action="payout.php" method="post">
         <div class="merchantChose">
           <h5>Выберите мерчанта</h5>
           <select
@@ -31,89 +31,98 @@
             class="form-control texts"
           />
         </div>
-          <div id="someclass">
-            <h5>Введите код метода(согласно админке MST/BA)</h5>
-            <input class="form-control custom-select-width" type="text" name="" id="">
+        <div id="someclass">
+          <h5>Введите код метода(согласно админке MST/BA)</h5>
+          <input
+            class="form-control custom-select-width"
+            type="text"
+            name="method_code"
+          />
+        </div>
+        <hr />
+        <div id="someclass1">
+          <h5>Введите название провайдера</h5>
+          <input type="text" class="form-control custom-select-width" />
+        </div>
+        <hr />
+        <div id="someclass2">
+          <h5>Укажите причину инцидента</h5>
+          <div class="form-block">
+            <select
+              id="mySelectCause"
+              name="mySelectCause"
+              class="form-control custom-select-width mr-1"
+            >
+              <option value="Закончился выплатной баланс">
+                Закончился выплатной баланс
+              </option>
+              <option value="Технические работы">Технические работы</option>
+              <option value="Просьба коллег">Просьба коллег</option>
+              <option value="Свой вариант">Свой вариант</option>
+            </select>
+            <input
+              type="text"
+              id="svar"
+              name="svar"
+              class="form-control texts mr-1"
+            />
           </div>
-          <hr>
-          <div id="someclass">
-            <h5>Введите название провайдера</h5>
-            <input type="text " class="form-control custom-select-width">
-          </div>
-          <hr>
-          <div id="someclass">
-            <h5>Укажите причину инцидента</h5>
-            <div class="form-inline">
-              <select
-                id="mySelectCause"
-                name="mySelectCause"
-                class="form-control custom-select-width mr-1"
-              >
-                <option value="zvp">Закончился выплатной баланс</option>
-                <option value="tr">Технические работы</option>
-                <option value="ts">Просьба коллег</option>
-                <option value="mcode">Свой вариант</option>
-              </select>
-              <input
-                type="text"
-                id="svar"
-                name="svar"
-                class="form-control texts mr-1"
-              />
+          <hr />
 
-            </div>
-            <hr />
-    
-            <h5>Укажите изменение</h5>
-            <div class="changeInc form-inline">
+          <h5>Укажите изменение</h5>
+          <div class="changeInc form-block">
+            <select
+              id="mySelectChange"
+              name="mySelectChange"
+              class="form-control custom-select-width"
+            >
+              <option value="Отключение метода">Отключение метода</option>
+              <option value="Отключение автоаппрува">
+                Отключение автоаппрува
+              </option>
+              <option value="Изменение каскада">Изменение каскада</option>
+              <option value="Альтернативный вариант">
+                Альтернативный вариант
+              </option>
+            </select>
+            <input
+              type="text"
+              id="am_text"
+              name="custom"
+              class="form-control texts mr-1"
+            />
+            <div id="changeIncProviders" class="form-group">
               <select
-                id="mySelectChange"
-                name="mySelectChange"
+                id="changeIncProvidersSelect"
                 class="form-control custom-select-width mr-1"
               >
-                <option value="otme">Отключение метода</option>
-                <option value="otap">Отключение автоаппрува</option>
-                <option value="izka">Изменение каскада</option>
-                <option value="am">Альтернативный вариант</option>
-              </select>
-              <input
-                type="text"
-                id="am_text"
-                name="custom"
-                class="form-control texts mr-1"
-              />
-              <div id="changeIncProviders" class="form-group">
-                <select
-                  id="changeIncProvidersSelect"
-                  class="form-control custom-select-width mr-1"
-                >
                 <option value="BIR">Birpay</option>
-                  <option value="BA">BA</option>
-                  <option value="GRNB">Greenback</option>
-                  <option value="MST">Mostbet</option>
-                  <option value="8BIL">8billing</option>
-                </select>
-              </div>
+                <option value="BA">BA</option>
+                <option value="GRNB">Greenback</option>
+                <option value="MST">Mostbet</option>
+                <option value="8BIL">8billing</option>
+              </select>
             </div>
-            <div id="cascadeChange" class="col-md-6">
-              <br />
-              <h5>Укажите как изменился каскад</h5>
-              <textarea
-                id="cascadeChangetext"
-                name="cascadeChangetext"
-                class="form-control"
-                rows="2"
-              ></textarea>
-              <br />
-              <hr>
           </div>
-          <hr>
+          <div id="cascadeChange" class="col-md-6">
+            <br />
+            <h5>Укажите как изменился каскад</h5>
+            <textarea
+              id="cascadeChangetext"
+              name="cascadeChangetext"
+              class="form-control"
+              rows="2"
+            ></textarea>
+            <br />
+            <hr />
+          </div>
+          <hr />
           <input type="checkbox" name="csInform" id="csInform" />
           <label for="csInform"><h5>Оповещение Customer Support</h5></label>
           <div id="partnInformCS">
             <h5>Укажите название метода на сайте</h5>
             <textarea
-              id="partnInformCS"
+              id="partnInformCS1"
               name="partnInformCS"
               class="form-control"
               rows="2"
@@ -121,16 +130,16 @@
           </div>
 
           <div>
-            <input type="submit" id="sendFormBtn"
-            class="form-control" 
-            value="Отправить">
-    
+            <input
+              type="submit"
+              id="sendFormBtn"
+              class="form-control"
+              value="Отправить"
+            />
           </div>
-
-
+        </div>
       </form>
     </div>
-
     <script src="script2.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
     <script src="styles/bootstrap.min.js"></script>

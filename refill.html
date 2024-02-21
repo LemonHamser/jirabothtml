@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
   <body>
-    <div class="container custom-container">
-      <form action="random.php" method="post">
+    <div class="custom-container">
+      <form action="refill.php" method="post">
         <div class="merchantChose">
           <h5>Выберите мерчанта</h5>
           <select
@@ -40,9 +40,9 @@
             name="mySelectTraff"
             class="form-control custom-select-width"
           >
-            <option value="First">Первичка</option>
-            <option value="Second">Вторичка</option>
-            <option value="Shared">Общий</option>
+            <option value="Первичка">Первичка</option>
+            <option value="Вторичка">Вторичка</option>
+            <option value="Общий">Общий</option>
           </select>
         </div>
         <hr />
@@ -68,16 +68,16 @@
         <hr class="hr-dark" />
 
         <h5>Укажите причину инцидента</h5>
-        <div class="form-inline">
+        <div class="form-block">
           <select
             id="mySelectCause"
             name="mySelectCause"
-            class="form-control custom-select-width mr-1"
+            class="form-control custom-select-width"
           >
-            <option value="sp">Снижение проходимости</option>
-            <option value="tr">Технические работы</option>
-            <option value="ts">Технический сбой</option>
-            <option value="mcode">Свой вариант</option>
+            <option value="Снижение проходимости">Снижение проходимости</option>
+            <option value="Технические работы">Технические работы</option>
+            <option value="Технический сбой">Технический сбой</option>
+            <option value="Свой вариант">Свой вариант</option>
           </select>
           <input
             type="text"
@@ -85,52 +85,49 @@
             name="svar"
             class="form-control texts mr-1"
           />
-          <div id="incProviders" class="form-group">
-            <select
-              id="incProvidersSelect"
-              class="form-control custom-select-width mr-1"
-            >
-              <option value="PDG">PDG</option>
-              <option value="BA">BA</option>
-              <option value="MST">Mostbet</option>
-              <option value="COR">Corefy</option>
-              <option value="BIR">Birpay</option>
-              <option value="GRNB">Greenback</option>
-            </select>
-          </div>
+
+          <select id="incProviders" class="form-control custom-select-width">
+            <option value="PDG">PDG</option>
+            <option value="BA">BA</option>
+            <option value="MST">Mostbet</option>
+            <option value="COR">Corefy</option>
+            <option value="BIR">Birpay</option>
+            <option value="GRNB">Greenback</option>
+          </select>
         </div>
         <hr />
 
         <h5>Укажите изменение</h5>
-        <div class="changeInc form-inline">
+        <div class="changeInc form-block">
           <select
             id="mySelectChange"
             name="mySelectChange"
-            class="form-control custom-select-width mr-1"
+            class="form-control custom-select-width"
           >
-            <option value="otme">Отключение метода</option>
-            <option value="izka">Изменение каскада</option>
-            <option value="am">Альтернативный вариант</option>
+            <option value="Отключение метода">Отключение метода</option>
+            <option value="Изменение каскада">Изменение каскада</option>
+            <option value="Альтернативный вариант">
+              Альтернативный вариант
+            </option>
           </select>
           <input
             type="text"
             id="am_text"
             name="custom"
-            class="form-control texts mr-1"
+            class="form-control texts"
           />
-          <div id="changeIncProviders" class="form-group">
-            <select
-              id="changeIncProvidersSelect"
-              class="form-control custom-select-width mr-1"
-            >
-              <option value="PDG">PDG</option>
-              <option value="BA">BA</option>
-              <option value="MST">Mostbet</option>
-              <option value="COR">Corefy</option>
-              <option value="BIR">Birpay</option>
-              <option value="GRNB">Greenback</option>
-            </select>
-          </div>
+
+          <select
+            id="changeIncProviders"
+            class="form-control custom-select-width"
+          >
+            <option value="PDG">PDG</option>
+            <option value="BA">BA</option>
+            <option value="MST">Mostbet</option>
+            <option value="COR">Corefy</option>
+            <option value="BIR">Birpay</option>
+            <option value="GRNB">Greenback</option>
+          </select>
         </div>
         <div id="cascadeChange" class="col-md-6">
           <br />
@@ -150,8 +147,8 @@
         </div>
         <hr />
         <input type="checkbox" name="partnInform" id="partnInform" />
-        <label for="partnInform">
-          <h5>Оповещение партнерки</h5>
+        <label for="partnInform" style="font-size: 20px; font-weight: 600">
+          Оповещение партнерки
         </label>
         <div id="partnInformDiv">
           <h5>Укажите причину инцидента</h5>
@@ -160,8 +157,7 @@
             name="partnInformInc"
             class="form-control"
             rows="2"
-          >
-          </textarea>
+          ></textarea>
           <h5>Укажите срок восстановления инцидента</h5>
           <input
             type="text"
@@ -172,25 +168,25 @@
         </div>
         <br />
         <input type="checkbox" name="csInform" id="csInform" />
-        <label for="csInform"><h5>Оповещение Customer Support</h5></label>
+        <label for="csInform" style="font-size: 20px; font-weight: 600"
+          >Оповещение Customer Support</label
+        >
         <div id="partnInformCS">
           <h5>Укажите название метода на сайте</h5>
           <textarea
-            id="partnInformCS"
+            id="partnInformCS1"
             name="partnInformCS"
             class="form-control"
             rows="2"
           ></textarea>
         </div>
-      </form>
-      <div>
         <input
           type="submit"
           id="sendFormBtn"
           class="form-control"
           value="Отправить"
         />
-      </div>
+      </form>
     </div>
 
     <script src="script.js"></script>

@@ -16,21 +16,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     mySelectCause.addEventListener('change', function() {
         var selectedValue = mySelectCause.value;
-        showOrHideElement(svarInput, selectedValue === 'mcode');
+        showOrHideElement(svarInput, selectedValue === 'Свой вариант');
     });
 
     mySelectChange.addEventListener('change', function() {
         var selectedValue = mySelectChange.value;
-        showOrHideElement(changeIncProviders, selectedValue === 'otme');
-        showOrHideElement(cascadeChange, selectedValue === 'izka');
-        showOrHideElement(am_text, mySelectChange.value === 'am');
+        showOrHideElement(changeIncProviders, selectedValue === 'Отключение метода');
+        showOrHideElement(cascadeChange, selectedValue === 'Изменение каскада');
+        showOrHideElement(am_text, mySelectChange.value === 'Альтернативный вариант');
     });
 
     // Initial state
-    showOrHideElement(svarInput, mySelectCause.value === 'mcode');
-    showOrHideElement(changeIncProviders, mySelectChange.value === 'otme');
-    showOrHideElement(cascadeChange, mySelectChange.value === 'izka');
-    showOrHideElement(am_text, mySelectChange.value === 'am');
+    showOrHideElement(svarInput, mySelectCause.value === 'Свой вариант');
+    showOrHideElement(changeIncProviders, mySelectChange.value === 'Отключение метода');
+    showOrHideElement(cascadeChange, mySelectChange.value === 'izИзменение каскадаka');
+    showOrHideElement(am_text, mySelectChange.value === 'Альтернативный вариант');
 
     csInformCheckbox.addEventListener('change', function() {
         if (csInformCheckbox.checked) {
