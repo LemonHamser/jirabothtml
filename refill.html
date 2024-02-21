@@ -51,7 +51,7 @@
           <input
             type="text"
             id="mcode"
-            name="mcode"
+            name="methodCode"
             class="form-control texts"
           />
         </div>
@@ -61,7 +61,7 @@
           <input
             type="text"
             id="pname"
-            name="pname"
+            name="providerName"
             class="form-control texts"
           />
         </div>
@@ -71,22 +71,26 @@
         <div class="form-block">
           <select
             id="mySelectCause"
-            name="mySelectCause"
+            name="incidentCause"
             class="form-control custom-select-width"
           >
             <option value="Снижение проходимости">Снижение проходимости</option>
             <option value="Технические работы">Технические работы</option>
             <option value="Технический сбой">Технический сбой</option>
-            <option value="Свой вариант">Свой вариант</option>
+            <option value="null">Свой вариант</option>
           </select>
           <input
             type="text"
             id="svar"
-            name="svar"
+            name="customIncidentCause"
             class="form-control texts mr-1"
           />
 
-          <select id="incProviders" class="form-control custom-select-width">
+          <select
+            id="incProviders"
+            name="incidentProviders"
+            class="form-control custom-select-width"
+          >
             <option value="PDG">PDG</option>
             <option value="BA">BA</option>
             <option value="MST">Mostbet</option>
@@ -101,24 +105,23 @@
         <div class="changeInc form-block">
           <select
             id="mySelectChange"
-            name="mySelectChange"
+            name="choseChange"
             class="form-control custom-select-width"
           >
             <option value="Отключение метода">Отключение метода</option>
             <option value="Изменение каскада">Изменение каскада</option>
-            <option value="Альтернативный вариант">
-              Альтернативный вариант
-            </option>
+            <option value="null">Альтернативный вариант</option>
           </select>
           <input
             type="text"
             id="am_text"
-            name="custom"
+            name="customChange"
             class="form-control texts"
           />
 
           <select
             id="changeIncProviders"
+            name="changeIncProviders"
             class="form-control custom-select-width"
           >
             <option value="PDG">PDG</option>
@@ -140,7 +143,11 @@
           ></textarea>
           <br />
           <h5>Изменилась ли проходимость?</h5>
-          <select id="yesNo" class="form-control custom-select-width mr-1">
+          <select
+            id="yesNo"
+            name="prohodimostChanged"
+            class="form-control custom-select-width mr-1"
+          >
             <option value="yes">Да</option>
             <option value="no">Нет</option>
           </select>
@@ -154,7 +161,7 @@
           <h5>Укажите причину инцидента</h5>
           <textarea
             id="partnInformInc"
-            name="partnInformInc"
+            name="partnInformReason"
             class="form-control"
             rows="2"
           ></textarea>
