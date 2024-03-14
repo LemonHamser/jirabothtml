@@ -1,29 +1,29 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var mySelectCause = document.getElementById('mySelectCause');
-  var svarInput = document.getElementById('svar');
-  var mySelectChange = document.getElementById('mySelectChange');
-  var amText = document.getElementById('am_text');
-  var incProviders = document.getElementById('incProviders');
-  var changeIncProviders = document.getElementById('changeIncProviders');
-  var cascadeChange = document.getElementById('cascadeChange');
-  var partnInformCheckbox = document.getElementById('partnInform');
-  var partnInformDiv = document.getElementById('partnInformDiv');
-  var partnInformCS = document.getElementById('partnInformCS');
-  var csInformCheckbox = document.getElementById('csInform');
+document.addEventListener("DOMContentLoaded", function () {
+  var mySelectCause = document.getElementById("mySelectCause");
+  var svarInput = document.getElementById("svar");
+  var mySelectChange = document.getElementById("mySelectChange");
+  var amText = document.getElementById("am_text");
+  var incProviders = document.getElementById("incProviders");
+  var changeIncProviders = document.getElementById("changeIncProviders");
+  var cascadeChange = document.getElementById("cascadeChange");
+  var partnInformCheckbox = document.getElementById("partnInform");
+  var partnInformDiv = document.getElementById("partnInformDiv");
+  var partnInformCS = document.getElementById("partnInformCS");
+  var csInformCheckbox = document.getElementById("csInform");
 
   function handleSelectChange(selectElement, targetElement, targetValue) {
-    selectElement.addEventListener('change', function() {
+    selectElement.addEventListener("change", function () {
       if (Array.isArray(targetValue)) {
         if (targetValue.includes(selectElement.value)) {
-          targetElement.style.display = 'inline-block';
+          targetElement.style.display = "inline-block";
         } else {
-          targetElement.style.display = 'none';
+          targetElement.style.display = "none";
         }
       } else {
         if (selectElement.value === targetValue) {
-          targetElement.style.display = 'inline-block';
+          targetElement.style.display = "inline-block";
         } else {
-          targetElement.style.display = 'none';
+          targetElement.style.display = "none";
         }
       }
     });
@@ -31,62 +31,67 @@ document.addEventListener("DOMContentLoaded", function() {
     // Проверка при загрузке страницы
     if (Array.isArray(targetValue)) {
       if (targetValue.includes(selectElement.value)) {
-        targetElement.style.display = 'inline-block';
+        targetElement.style.display = "inline-block";
       } else {
-        targetElement.style.display = 'none';
+        targetElement.style.display = "none";
       }
     } else {
       if (selectElement.value === targetValue) {
-        targetElement.style.display = 'inline-block';
+        targetElement.style.display = "inline-block";
       } else {
-        targetElement.style.display = 'none';
+        targetElement.style.display = "none";
       }
     }
   }
 
   // Обработка для mySelectCause и svarInput
-  handleSelectChange(mySelectCause, svarInput, 'Свой вариант');
+  handleSelectChange(mySelectCause, svarInput, "null");
 
   // Обработка для mySelectChange и amText
-  handleSelectChange(mySelectChange, amText, 'Альтернативный вариант');
+  handleSelectChange(mySelectChange, amText, "null");
 
   // Обработка для mySelectCause и incProviders
-  handleSelectChange(mySelectCause, incProviders, ['Снижение проходимости', 'Технические работы', 'Технический сбой']);
+  handleSelectChange(mySelectCause, incProviders, [
+    "Снижение проходимости",
+    "Технические работы",
+    "Технический сбой",
+  ]);
 
   // Обработка для mySelectChange и changeIncProviders
-  handleSelectChange(mySelectChange, changeIncProviders, ['Отключение метода','Изменение каскада']);
-  handleSelectChange(mySelectChange, cascadeChange, ['Изменение каскада']);
+  handleSelectChange(mySelectChange, changeIncProviders, [
+    "Отключение метода",
+    "Изменение каскада",
+  ]);
+  handleSelectChange(mySelectChange, cascadeChange, ["Изменение каскада"]);
 
-  partnInformCheckbox.addEventListener('change', function() {
+  partnInformCheckbox.addEventListener("change", function () {
     if (partnInformCheckbox.checked) {
-      partnInformDiv.style.display = 'block';
+      partnInformDiv.style.display = "block";
     } else {
-      partnInformDiv.style.display = 'none';
+      partnInformDiv.style.display = "none";
     }
   });
 
-  csInformCheckbox.addEventListener('change', function() {
+  csInformCheckbox.addEventListener("change", function () {
     if (csInformCheckbox.checked) {
-      partnInformCS.style.display = 'block';
+      partnInformCS.style.display = "block";
     } else {
-      partnInformCS.style.display = 'none';
+      partnInformCS.style.display = "none";
     }
   });
 
   // Проверка при загрузке страницы
   if (partnInformCheckbox.checked) {
-    partnInformDiv.style.display = 'block';
+    partnInformDiv.style.display = "block";
   } else {
-    partnInformDiv.style.display = 'none';
+    partnInformDiv.style.display = "none";
   }
 
   if (csInformCheckbox.checked) {
-    partnInformCS.style.display = 'block';
+    partnInformCS.style.display = "block";
   } else {
-    partnInformCS.style.display = 'none';
+    partnInformCS.style.display = "none";
   }
-
-  
 });
 
 // $(document).ready(function(){
